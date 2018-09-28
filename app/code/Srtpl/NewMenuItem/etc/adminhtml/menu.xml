@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="Srtpl_NewMenuItem::main_menu" title="Main Menu"
+            module="Srtpl_NewMenuItem" sortOrder="20"
+            resource="Srtpl_NewMenuItem::mainmenu" />
+        <add id="Srtpl_NewMenuItem::submenu1" title="Sub Menu1"
+            module="Srtpl_NewMenuItem" sortOrder="1" parent="Srtpl_NewMenuItem::main_menu"
+            action="simplenews/news/new" resource="Srtpl_NewMenuItem::submenu1" />
+        <add id="Srtpl_NewMenuItem::submenu2" title="Sub Menu2"
+            module="Srtpl_NewMenuItem" sortOrder="2" parent="Srtpl_NewMenuItem::main_menu"
+            action="simplenews/news/index" resource="Srtpl_NewMenuItem::submenu2" />
+    </menu>
+</config>

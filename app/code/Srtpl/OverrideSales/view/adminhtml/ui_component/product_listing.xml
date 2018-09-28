@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <columns name="product_columns">
+        <column name="manage_stock" component="Magento_Ui/js/grid/columns/select" sortOrder="76">
+            <settings>
+                <addField>true</addField>
+                <options class="Magento\Config\Model\Config\Source\Yesno"/>
+                <filter>select</filter>
+                <dataType>select</dataType>
+                <sortable>false</sortable>
+                <label translate="true">Manage Stock</label>
+            </settings>
+        </column>
+        <column name="special_price" class="Srtpl\OverrideSales\Ui\Component\Listing\Column\Productqty" sortOrder="80">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Special Price</item>
+                    <!--<item name="sortOrder" xsi:type="number">78</item>-->
+                </item>
+            </argument>
+        </column>
+    </columns>
+</listing>

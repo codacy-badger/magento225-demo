@@ -1,0 +1,50 @@
+<!--http://learn.knockoutjs.com/#/?tutorial=loadingsaving-->
+<div>
+    <form method="post" class="feedback" id="feedback-form" data-role="feedback-form" data-bind="submit: submitFeedback">
+        <fieldset class="fieldset">
+            <div class="field name required">
+                <label for="name" class="label"><span>Name</span></label>
+                <div class="control">
+                    <input type="text" data-validate="{required:true}"
+                           class="input-text" title="Name"
+                           id="user_name" aria-required="true"
+                           data-bind="value:uname,attr: {'data-validate': JSON.stringify({required:true})},
+                                        ">
+                </div>
+            </div>
+            <div class="field email required">
+                <label for="email" class="label"><span>Email</span></label>
+                <div class="control">
+                    <input type="text" data-validate="{required:true}" data-bind="value:email,attr: {'data-validate': JSON.stringify({required:true,'validate-email':true})},
+                                        " class="input-text" title="Email" id="email" aria-required="true" >
+                </div>
+            </div>
+            <div class="field telephone">
+                <label for="telephone" class="label"><span>Phone Number</span></label>
+                <div class="control">
+                    <input type="text" class="input-text" value="" title="Phone Number" id="telephone" data-bind="value:phone">
+                </div>
+            </div>
+            <div class="field address">
+                <label for="address" class="label"><span>Address</span></label>
+                <div class="control">
+                    <textarea title="Address" id="address" data-bind="value:address"></textarea>
+                </div>
+            </div>
+<p>Send me spam: <input type="checkbox" data-bind="checked: wantsSpam" /></p>
+<div data-bind="visible: wantsSpam">
+    Preferred flavors of spam:
+    <div><input type="checkbox" value="cherry" data-bind="checked: spamFlavors" /> Cherry</div>
+    <div><input type="checkbox" value="almond" data-bind="checked: spamFlavors" /> Almond</div>
+    <div><input type="checkbox" value="msg" data-bind="checked: spamFlavors" /> Monosodium Glutamate</div>
+</div>
+        </fieldset>
+    </form>
+</div>
+<div style="text-align: center;"><h1>Your Order Details</h1></div>
+<table>
+    <tr><td><b>Your Name: </b></td><td data-bind="text:uname"></td></tr>
+    <tr><td><b>Email Address: </b></td><td data-bind="text:email"></td></tr>
+    <tr><td><b>Phone Number: </b></td><td data-bind="text:phone"></td></tr>
+    <tr><td><b>Address: </b></td><td data-bind="text:address"></td></tr>
+</table>
