@@ -1,0 +1,30 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+
+	<head>
+        <title>Frontendsample</title>
+        <!--
+		demo
+		<css src="Srtpl_Frontendsample::css/css.css"/>
+		<script src="Srtpl_Frontendsample::js/js.js"/>
+		<css src="jquery/fileUploader/css/jquery.fileupload-ui.css"/>
+		<script src="path/file.js" defer="defer"/>
+		<link src="http://url.com" src_type="url"/>
+		<remove src="path/remove/file.css"/>
+
+		-->
+    </head>
+
+    <body>
+
+
+        <referenceContainer name="sidebar.main">
+            <block class="Srtpl\Frontendsample\Block\Index\Sidebar" name="frontendsample_index_sidebar" before="-" template="Srtpl_Frontendsample::frontendsample_index_sidebar.phtml"/>
+        </referenceContainer>
+
+        <referenceContainer name="content">
+            <block class="Srtpl\Frontendsample\Block\Index\Index" name="frontendsample_index_index" template="Srtpl_Frontendsample::frontendsample_index_index.phtml"/>
+        </referenceContainer>
+
+
+    </body>
+</page>

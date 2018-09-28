@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Srtpl_Backendgrid::parent" title="Backendgrid" module="Srtpl_Backendgrid" sortOrder="100" resource="Srtpl_Backendgrid::parent"/>
+		<add id="Srtpl_Backendgrid::backendgrid" title="Srtpl Backendgrid" module="Srtpl_Backendgrid" sortOrder="20" parent="Srtpl_Backendgrid::parent" action="backendgrid/backendgrid" resource="Srtpl_Backendgrid::backendgrid"/>
+
+    </menu>
+</config>

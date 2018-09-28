@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+	<!-- custom event-->
+    <event name="srtpl_eventexample_display_text">
+        <observer name="mp_display_text" instance="Srtpl\EventExample\Observer\ChangeDisplayText" />
+    </event>
+    <!-- default event-->
+    <event name="catalog_controller_product_view">
+        <observer name="CloudwaysProductData" instance="Srtpl\EventExample\Observer\Product\Data" />
+    </event>
+</config>

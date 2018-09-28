@@ -1,0 +1,24 @@
+/**
+ *
+ * @category    Srtpl
+ * @package     Srtpl_Backendgrid
+ * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
+ * @license     https://www.mageplaza.com/LICENSE.txt
+ */
+
+@srtpl-icons-admin__font-name : 'icomoon';
+@srtpl-icons-admin__font-name-path: '@{baseDir}Srtpl_Backendgrid/fonts/@{srtpl-icons-admin__font-name}';
+
+.lib-font-face(
+  @family-name:@srtpl-icons-admin__font-name,
+  @font-path: @srtpl-icons-admin__font-name-path,
+  @font-weight: normal,
+  @font-style: normal
+);
+
+.admin__menu #menu-srtpl-backendgrid-parent.parent.level-0 > a:before {
+  content: "\e964";
+  font-family: @srtpl-icons-admin__font-name;
+  font-size: 2rem;
+  padding-top: .2rem;
+}

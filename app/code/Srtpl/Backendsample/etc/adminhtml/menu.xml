@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Srtpl_Backendsample::parent" title="Backendsample" module="Srtpl_Backendsample" sortOrder="100" resource="Srtpl_Backendsample::parent"/>
+        <add id="Srtpl_Backendsample::index" title="Backendsample Index" module="Srtpl_Backendsample" sortOrder="10" action="backendsample/index" resource="Srtpl_Backendsample::index" parent="Srtpl_Backendsample::parent"/>
+
+    </menu>
+</config>
