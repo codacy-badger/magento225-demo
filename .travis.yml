@@ -14,7 +14,7 @@ addons:
 language: php
 php:
   - 7.0
-  #- 7.1
+  - 7.1
 git:
   depth: 5
 env:
@@ -49,10 +49,10 @@ cache:
     - $HOME/.nvm
     - $HOME/node_modules
     - $HOME/yarn.lock
-before_install: ./dev/travis/before_install.sh
-install: composer install --no-interaction --prefer-dist
-before_script: ./dev/travis/before_script.sh
-script:
+#before_install: ./dev/travis/before_install.sh
+#install: composer install --no-interaction --prefer-dist
+#before_script: ./dev/travis/before_script.sh
+#script:
   # Set arguments for variants of phpunit based tests; '|| true' prevents failing script when leading test fails
   #- test $TEST_SUITE = "functional" && TEST_FILTER='dev/tests/functional/testsuites/Magento/Mtf/TestSuite/InjectableTests.php' || true
 
