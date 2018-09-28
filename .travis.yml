@@ -23,8 +23,8 @@ env:
     - INTEGRATION_SETS=3
     - NODE_JS_VERSION=8
     - MAGENTO_HOST_NAME="magento2.travis"
-  #matrix:
-   # - TEST_SUITE=unit
+  matrix:
+    - TEST_SUITE=unit
     #- TEST_SUITE=static
     #- TEST_SUITE=js GRUNT_COMMAND=spec
     #- TEST_SUITE=js GRUNT_COMMAND=static
@@ -32,10 +32,10 @@ env:
     #- TEST_SUITE=integration INTEGRATION_INDEX=2
     #- TEST_SUITE=integration INTEGRATION_INDEX=3
     #- TEST_SUITE=functional
-#matrix:
-  #exclude:
+matrix:
+  exclude:
    # - php: 7.0
-   #   env: TEST_SUITE=static
+      env: TEST_SUITE=static
    # - php: 7.0
    #   env: TEST_SUITE=js GRUNT_COMMAND=spec
    # - php: 7.0
